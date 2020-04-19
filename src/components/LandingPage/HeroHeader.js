@@ -4,7 +4,7 @@ import HeaderImg from "../../images/LandingPage/Logo_Macbook-iPhone_Dark.png"
 
 const HeroHeader = () => {
   return (
-    <section className="w-full flex flex-wrap items-center justify-around px-8 py-12 text-gray">
+    <section className="w-full flex flex-wrap items-center justify-around px-8 py-12 text-gray HeroHeader" id="HeroHeader">
       <div className="max-w-md">
         <h1 className="font-header font-thin text-5xl my-4 highlight">
           Easy Device Screenshots

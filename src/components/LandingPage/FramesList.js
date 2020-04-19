@@ -21,13 +21,6 @@ import iMac_Dark from "../../images/LandingPage/Logo_iMac_Dark.png"
 
 const list = [
   {
-    name: "Browser",
-    styles: {
-      Light: Safari_Light,
-      Dark: Safari_Dark,
-    },
-  },
-  {
     name: "iPhone",
     styles: {
       Light: iPhone_Light,
@@ -39,6 +32,13 @@ const list = [
     styles: {
       Light: Android_Light,
       Dark: Android_Dark,
+    },
+  },
+  {
+    name: "Browser",
+    styles: {
+      Light: Safari_Light,
+      Dark: Safari_Dark,
     },
   },
   {
@@ -101,7 +101,10 @@ const FramesList = () => {
   const goToElement = useScroll({ ref: snapList })
 
   return (
-    <section className="w-full text-center bg-primary text-white py-8">
+    <section
+      className="w-full text-center bg-primary text-white py-8"
+      id="FrameList"
+    >
       <h2 className="my-2">Available Devices</h2>
       <div className="flex items-center justify-center">
         <StyleButton

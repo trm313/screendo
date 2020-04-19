@@ -6,3 +6,23 @@
   );
   display: inline;
 }
+
+#LandingPage {
+  background-image: radial-gradient(#fff0f3 1%, transparent 2%),
+    radial-gradient(#e4e4e4 1%, transparent 2%);
+  background-color: #fff;
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+  /* height: 200px; */
+  width: 100%;
+}
+
+#FrameList {
+  background-image: radial-gradient(#ffa7ba 1%, transparent 2%),
+    radial-gradient(#e4e4e4 1%, transparent 2%);
+  /* background-color: #fff; */
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+  /* height: 200px; */
+  width: 100%;
+}
