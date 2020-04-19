@@ -7,12 +7,14 @@ import SEO from "../components/Layout/seo"
 
 import HeroHeader from "../components/LandingPage/HeroHeader"
 import FramesList from "../components/LandingPage/FramesList"
+import FAQ from "../components/LandingPage/FAQ"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <HeroHeader />
     <FramesList />
+    <FAQ />
   </Layout>
 )
 
