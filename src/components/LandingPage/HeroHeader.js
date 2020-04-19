@@ -4,19 +4,22 @@ import HeaderImg from "../../images/LandingPage/Logo_Macbook-iPhone_Dark.png"
 
 const HeroHeader = () => {
   return (
-    <section className="w-full flex flex-wrap items-center justify-around px-8 py-12 text-gray HeroHeader" id="HeroHeader">
-      <div className="max-w-md">
+    <section
+      className="w-full flex flex-wrap items-center justify-around px-8 py-12 text-gray HeroHeader"
+      id="HeroHeader"
+    >
+      <div className="max-w-md text-center mx-auto md:mx-0 md:text-left">
         <h1 className="font-header font-thin text-5xl my-4 highlight">
           Easy Device Screenshots
         </h1>
         <h2 className="font-paragraph font-thin text-2xl my-4 normal-case">
           Devices are dynamically generated to fit your image
         </h2>
-        <h6 className="my-2 text-gray-600 text-center mx-auto">
+        <h6 className="my-2 text-gray-600">
           No cropping, no stretching, no headaches
         </h6>
         <Link
-          className="btn btn-primary shadow-lg w-40 justify-center mx-auto"
+          className="btn btn-primary shadow-lg justify-center w-40 mx-auto md:mx-0"
           to="/app"
         >
           <span>Go To App</span>
