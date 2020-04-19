@@ -49,8 +49,8 @@ const Header = ({ siteTitle }) => {
         }
       >
         <div className="text-sm md:flex-grow ml-12">
-          <NavLink to="#">Docs</NavLink>
-          <NavLink to="#">Blog</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/app">App</NavLink>
         </div>
       </div>
     </nav>
