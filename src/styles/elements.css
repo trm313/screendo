@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/** TYPOGRAPHY **/
+h1 {
+  @apply uppercase font-header font-thin text-3xl;
+}
+h2 {
+  @apply uppercase text-2xl;
+}
+h3 {
+  @apply text-xl;
+}
+h4 {
+  @apply uppercase font-header text-lg;
+}
+h5 {
+  @apply text-lg;
+}
+h6 {
+  @apply uppercase font-header;
+}
+p {
+  @apply font-paragraph;
+}
+a:hover {
+  @apply text-primary;
+}
+
+/** BUTTONS **/
+.btn {
+  @apply bg-gray-400 py-2 px-4 rounded font-header font-thin uppercase flex items-center;
+}
+
+.btn-primary {
+  @apply bg-primary text-white;
+}
+.btn-primary:hover {
+  @apply bg-primary-400 text-white;
+}
+
+.btn-sm {
+  @apply text-xs py-1 px-3;
+}
+
+.disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.btn-pill {
+  @apply shadow-md no-underline rounded-full mr-2;
+}
+
+.btn-icon {
+  @apply flex items-center justify-between;
+}
+
+.btn-round {
+  @apply flex rounded-full p-2;
+}
+
+/** FORMS **/
+.form-input {
+  @apply flex-grow py-2 px-4 bg-gray-200 text-gray-800 rounded text-sm;
+}
+.form-group {
+  @apply flex w-full my-2;
+}
+.form-label {
+  @apply uppercase text-xs flex-shrink-0 mr-2;
+}
+
+.spin-inf {
+  animation: spin infinite 0.75s linear;
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
