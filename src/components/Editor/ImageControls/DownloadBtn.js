@@ -76,7 +76,7 @@ const DownloadBtn = ({ renameInput = true }) => {
   }
 
   return (
-    <div className="form-group max-w-lg my-8 shadow">
+    <div className="form-group max-w-lg my-4 shadow">
       <button
         className={`btn bg-gray-200 rounded-r-none ${
           dirtyInput ? "text-accent" : "text-gray-400"

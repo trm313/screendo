@@ -37,9 +37,55 @@ const Editor = props => {
     dispatch(handleDeviceConfigChange({ field: "type", value: type }))
   }
 
+  // return (
+  //   <div className="flex w-full flex flex-col justify-center items-center">
+  //     <div className="w-full p-8 my-2 flex flex-wrap justify-around">
+  //       <Section label="Image">
+  //         <Uploader />
+  //       </Section>
+  //       <Section label="Canvas">
+  //         <Slider
+  //           onChange={val => handleEditorChange("padding", val)}
+  //           value={graphic.imageConfigSettings.padding}
+  //           min={10}
+  //           max={100}
+  //           step={5}
+  //           label="Padding"
+  //           units="px"
+  //         />
+  //         <h6 className="uppercase font-paragraph text-gray text-xs font-thin">
+  //           Background Color
+  //         </h6>
+  //         <ColorPicker
+  //           onChange={val => handleEditorChange("bgColor", val)}
+  //           value={graphic.imageConfigSettings.bgColor}
+  //         />
+  //       </Section>
+  //       <Section label="Device">
+  //         {device.enabledControls.frameStyleSelection && (
+  //           <DeviceStyleSelector
+  //             styles={device.styles}
+  //             onSelect={handleDeviceStyleChange}
+  //             selectedType={graphic.deviceConfigSettings.type}
+  //           />
+  //         )}
+  //         {device.enabledControls.notchSelection && (
+  //           <ToggleButton
+  //             label="Notch"
+  //             value={graphic.imageConfigSettings.includeNotch}
+  //             onChange={val => handleEditorChange("includeNotch", val)}
+  //           />
+  //         )}
+  //       </Section>
+  //     </div>
+  //     <DownloadBtn />
+  //     <Frame graphic={graphic} device={device} image={image} />
+  //   </div>
+  // )
+
   return (
-    <div className="flex w-full flex flex-col justify-center items-center">
-      <div className="w-full p-8 m-4 flex flex-wrap justify-around">
+    <div className="flex flex-wrap w-full">
+      <div className="w-full lg:w-1/4 flex items-center lg:flex-col lg:justify-center">
         <Section label="Image">
           <Uploader />
         </Section>
@@ -78,8 +124,10 @@ const Editor = props => {
           )}
         </Section>
       </div>
-      <DownloadBtn />
-      <Frame graphic={graphic} device={device} image={image} />
+      <div className="flex-grow flex flex-col justify-center items-center">
+        <DownloadBtn />
+        <Frame graphic={graphic} device={device} image={image} />
+      </div>
     </div>
   )
 }
