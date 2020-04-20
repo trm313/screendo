@@ -68,7 +68,7 @@ const Curvature = styled.div`
 // clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
 
 const MacAir = props => {
-  const { image, imageKey, graphic, device, styleParams } = props
+  const { image, graphic, device, styleParams } = props
 
   let buttonColor = "#c3c3c3"
   if (styleParams.type === "Dark") {
@@ -80,7 +80,7 @@ const MacAir = props => {
   return (
     <Container
       data-label="Container"
-      id={`screenshot-${imageKey}`}
+      id={`screenshot-0`}
       bgColor={graphic.imageConfigSettings.bgColor}
       padding={graphic.imageConfigSettings.padding}
     >

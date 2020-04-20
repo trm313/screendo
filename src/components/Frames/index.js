@@ -9,7 +9,7 @@ import IMacPro from "./IMacPro"
 import MacAir from "./MacAir"
 
 const Frame = props => {
-  const { graphic, device, image, imageKey } = props
+  const { graphic, device, image } = props
 
   let styleParams = device.styles.find(
     style => style.type === graphic.deviceConfigSettings.type
@@ -25,7 +25,6 @@ const Frame = props => {
       {graphic.device === devices.SAFARIBROWSER && (
         <Browser
           image={image}
-          imageKey={imageKey}
           graphic={graphic}
           device={device}
           styleParams={styleParams}
@@ -34,7 +33,6 @@ const Frame = props => {
       {graphic.device === devices.ANDROID && (
         <Android
           image={image}
-          imageKey={imageKey}
           graphic={graphic}
           device={device}
           styleParams={styleParams}
@@ -43,7 +41,6 @@ const Frame = props => {
       {graphic.device === devices.IPHONEX && (
         <IPhoneX
           image={image}
-          imageKey={imageKey}
           graphic={graphic}
           device={device}
           styleParams={styleParams}
@@ -52,7 +49,6 @@ const Frame = props => {
       {graphic.device === devices.IMACPRO && (
         <IMacPro
           image={image}
-          imageKey={imageKey}
           graphic={graphic}
           device={device}
           styleParams={styleParams}
@@ -61,7 +57,6 @@ const Frame = props => {
       {graphic.device === devices.MACAIR && (
         <MacAir
           image={image}
-          imageKey={imageKey}
           graphic={graphic}
           device={device}
           styleParams={styleParams}

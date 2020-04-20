@@ -1,26 +1,13 @@
 import React from "react"
-import { useSelector, useDispatch } from "react-redux"
+// import { useSelector, useDispatch } from "react-redux"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Layout/seo"
 
 import DeviceSelector from "../components/DeviceSelector"
 import Editor from "../components/Editor"
-import DownloadBtn from "../components/Editor/ImageControls/DownloadBtn"
 
 const AppPage = () => {
-  const dispatch = useDispatch()
-  const graphic = useSelector(store => store.graphic)
-
-  const onDrop = pictures => {
-    console.log("onDrop", pictures)
-    let imagesData = pictures.map(p => {
-      return URL.createObjectURL(p)
-    })
-
-    console.log(imagesData)
-  }
-
   return (
     <Layout>
       <SEO title="App" />
@@ -29,8 +16,7 @@ const AppPage = () => {
         id="Polkadot--Grey"
       >
         <DeviceSelector />
-
-        <Editor onUpload={onDrop} imageKey={0} />
+        <Editor />
       </div>
     </Layout>
   )

@@ -41,7 +41,7 @@ const Image = styled.img`
 `
 
 const Browser = props => {
-  const { image, imageKey, graphic, device, styleParams } = props
+  const { image, graphic, device, styleParams } = props
 
   const [borderRadius, setBorderRadius] = useState(15)
   const [boxShadow, setBoxShadow] = useState("0 0 4px rgba(0,0,0,.2)")
@@ -49,7 +49,7 @@ const Browser = props => {
   return (
     <Container
       data-label="Container"
-      id={`screenshot-${imageKey}`}
+      id={`screenshot-0`}
       bgColor={graphic.imageConfigSettings.bgColor}
       padding={graphic.imageConfigSettings.padding}
     >

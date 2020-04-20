@@ -5,8 +5,6 @@ import { useSelector, useDispatch } from "react-redux"
 import { setImage } from "../../../reducers/graphicReducer"
 
 const Uploader = props => {
-  const { onUpload } = props
-
   const dispatch = useDispatch()
   const graphic = useSelector(store => store.graphic)
 

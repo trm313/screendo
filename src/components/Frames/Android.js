@@ -60,7 +60,7 @@ const Image = styled.img`
 `
 
 const Android = props => {
-  const { image, imageKey, graphic, device, styleParams } = props
+  const { image, graphic, device, styleParams } = props
 
   let buttonColor = "#c3c3c3"
   let speakerColor = "#bbbaba"
@@ -72,7 +72,7 @@ const Android = props => {
   return (
     <Container
       data-label="Container"
-      id={`screenshot-${imageKey}`}
+      id={`screenshot-0`}
       bgColor={graphic.imageConfigSettings.bgColor}
       padding={graphic.imageConfigSettings.padding}
     >

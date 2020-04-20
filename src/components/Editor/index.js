@@ -18,7 +18,6 @@ import Uploader from "./ImageControls/Uploader"
 import DownloadBtn from "./ImageControls/DownloadBtn"
 
 const Editor = props => {
-  let { imageKey, onUpload } = props
   const dispatch = useDispatch()
   const graphic = useSelector(store => store.graphic)
 
@@ -42,7 +41,7 @@ const Editor = props => {
     <div className="flex w-full flex flex-col justify-center items-center">
       <div className="w-full p-8 m-4 flex flex-wrap justify-around">
         <Section label="Image">
-          <Uploader onUpload={onUpload} />
+          <Uploader />
         </Section>
         <Section label="Canvas">
           <Slider
@@ -80,12 +79,7 @@ const Editor = props => {
         </Section>
       </div>
       <DownloadBtn />
-      <Frame
-        graphic={graphic}
-        device={device}
-        image={image}
-        imageKey={imageKey}
-      />
+      <Frame graphic={graphic} device={device} image={image} />
     </div>
   )
 }
