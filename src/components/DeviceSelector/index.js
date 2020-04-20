@@ -34,7 +34,7 @@ const DeviceSelector = props => {
             onClick={() => setSelectedType(type.type)}
             className={`flex-grow p-4 flex flex-col items-center justify-center cursor-pointer border-gray-200 border-r last:border-r-0 ${
               selectedType !== type.type && "border-b border-gray-200"
-            } ${selectedType === type.type && "text-primary"}`}
+            } ${selectedType === type.type && "text-primary bg-white"}`}
           >
             <i
               className={`${type.icon}${
@@ -45,15 +45,17 @@ const DeviceSelector = props => {
           </div>
         ))}
       </div>
-      <div className="w-full flex justify-around border-gray-200 border-b">
+      <div className="bg-white shadow w-full flex justify-around border-gray-200 border-b">
         {visibleDevices.map(device => (
           <div
-            className={`flex-grow flex justify-center py-4 cursor-pointer`}
+            className={`flex-grow flex justify-center py-4 cursor-pointer ${
+              graphic.device === device.device && "shadow-inner"
+            }`}
             onClick={() => handleSelect(device.device)}
           >
             <h6
               className={`font-thin  ${
-                graphic.device === device.device && "text-primary"
+                graphic.device === device.device && "text-primary font-normal"
               }`}
             >
               {device.name}

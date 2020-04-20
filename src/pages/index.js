@@ -12,7 +12,7 @@ import FAQ from "../components/LandingPage/FAQ"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div id="LandingPage">
+    <div id="Polkadot--Grey">
       <HeroHeader />
       <FramesList />
       <FAQ />

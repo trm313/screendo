@@ -40,7 +40,7 @@ const Editor = props => {
 
   return (
     <div className="flex w-full flex flex-col justify-center items-center">
-      <div className="bg-white w-full p-8 m-4 flex flex-wrap justify-around">
+      <div className="w-full p-8 m-4 flex flex-wrap justify-around">
         <Section label="Image">
           <Uploader onUpload={onUpload} />
         </Section>

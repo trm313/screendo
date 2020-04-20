@@ -7,9 +7,9 @@ let initialState = {
     type: "UPLOAD",
     image: null,
     filename: null,
-    name: "Screenshot.png",
+    name: "Screendo.png",
   },
-  device: devices.IMACPRO,
+  device: devices.MACAIR,
   deviceConfigSettings: {
     type: "Light",
   },
@@ -27,7 +27,10 @@ const graphicSlice = createSlice({
   initialState,
   reducers: {
     setImage(state, action) {
-      state.source.image = action.payload
+      console.log({ state, action })
+      state.source.image = action.payload.image
+      state.source.filename = action.payload.filename
+
       return state
     },
     setImageName(state, action) {

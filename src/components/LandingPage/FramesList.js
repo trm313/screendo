@@ -103,7 +103,7 @@ const FramesList = () => {
   return (
     <section
       className="w-full text-center bg-primary text-white py-8"
-      id="FrameList"
+      id="Polkadot--Primary"
     >
       <h2 className="my-2">Available Devices</h2>
       <div className="flex items-center justify-center">

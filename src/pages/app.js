@@ -24,7 +24,10 @@ const AppPage = () => {
   return (
     <Layout>
       <SEO title="App" />
-      <div className="min-h-screen w-full flex flex-col items-center mb-32">
+      <div
+        className="min-h-screen w-full flex flex-col items-center mb-32"
+        id="Polkadot--Grey"
+      >
         <DeviceSelector />
 
         <Editor onUpload={onDrop} imageKey={0} />

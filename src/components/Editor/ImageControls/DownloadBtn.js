@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import styled from "styled-components"
 import domtoimage from "dom-to-image"
@@ -24,6 +24,22 @@ const DownloadBtn = ({ renameInput = true }) => {
   const dispatch = useDispatch()
   const graphic = useSelector(store => store.graphic)
 
+  const [dirtyInput, setDirtyInput] = useState(false)
+  const [filename, setFilename] = useState("")
+
+  useEffect(() => {
+    if (graphic.source.filename && !dirtyInput) {
+      let name = generateFilename()
+      dispatch(setImageName(name))
+      // setFilename(name);
+    }
+  }, [
+    graphic.source.image,
+    graphic.source.filename,
+    graphic.device,
+    graphic.deviceConfigSettings.type,
+  ])
+
   if (!renameInput) {
     return (
       <button
@@ -36,12 +52,37 @@ const DownloadBtn = ({ renameInput = true }) => {
     )
   }
 
+  const generateFilename = () => {
+    let name = `${graphic.source.filename.split(".")[0]}_${graphic.device}_${
+      graphic.deviceConfigSettings.type
+    }.png`
+    return name
+  }
+
+  const handleChangeInput = val => {
+    setDirtyInput(true)
+    dispatch(setImageName(val))
+  }
+
+  const resetInput = () => {
+    let name = generateFilename()
+    dispatch(setImageName(name))
+    setDirtyInput(false)
+  }
+
   return (
-    <div className="form-group max-w-md my-8 shadow">
+    <div className="form-group max-w-lg my-8 shadow">
+      <button
+        className="btn bg-gray-200 text-accent rounded-r-none"
+        title="Reset Default"
+        onClick={() => resetInput()}
+      >
+        <i className="ri-refresh-line" />
+      </button>
       <input
-        className="form-input rounded-r-none"
+        className="form-input rounded-none"
         value={graphic.source.name}
-        onChange={e => dispatch(setImageName(e.target.value))}
+        onChange={e => handleChangeInput(e.target.value)}
       />
       <button
         className="btn btn-primary rounded-l-none"
