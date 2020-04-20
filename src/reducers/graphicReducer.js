@@ -6,7 +6,7 @@ let initialState = {
   source: {
     type: "UPLOAD",
     image: null,
-    filename: null,
+    filename: "Screendo.png",
     name: "Screendo.png",
   },
   device: devices.MACAIR,

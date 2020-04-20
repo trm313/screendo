@@ -48,14 +48,12 @@ const DeviceSelector = props => {
       <div className="bg-white shadow w-full flex justify-around border-gray-200 border-b">
         {visibleDevices.map(device => (
           <div
-            className={`flex-grow flex justify-center py-4 cursor-pointer ${
-              graphic.device === device.device && "shadow-inner"
-            }`}
+            className={`flex-grow flex justify-center py-4 cursor-pointer`}
             onClick={() => handleSelect(device.device)}
           >
             <h6
-              className={`font-thin  ${
-                graphic.device === device.device && "text-primary font-normal"
+              className={`font-thin ${
+                graphic.device === device.device ? "highlight" : ""
               }`}
             >
               {device.name}

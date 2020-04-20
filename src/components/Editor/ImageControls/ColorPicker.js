@@ -61,7 +61,7 @@ const ColorPicker = props => {
         <div className="flex">
           <input
             value={value}
-            className="h-8 text-sm px-2 rounded text-gray-800 border"
+            className="h-8 text-xs px-2 rounded text-gray-800 border border-gray"
             style={{ maxWidth: "100px" }}
             onChange={e => handleChangeComplete({ hex: e.target.value }, e)}
           />

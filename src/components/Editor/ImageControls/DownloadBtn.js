@@ -24,8 +24,8 @@ const DownloadBtn = ({ renameInput = true }) => {
   const dispatch = useDispatch()
   const graphic = useSelector(store => store.graphic)
 
+  // If Input is dirty, we will permanently honor it (and not autogenerate filenames on graphic changes)
   const [dirtyInput, setDirtyInput] = useState(false)
-  const [filename, setFilename] = useState("")
 
   useEffect(() => {
     if (graphic.source.filename && !dirtyInput) {
@@ -34,6 +34,7 @@ const DownloadBtn = ({ renameInput = true }) => {
       // setFilename(name);
     }
   }, [
+    dirtyInput,
     graphic.source.image,
     graphic.source.filename,
     graphic.device,
@@ -60,10 +61,14 @@ const DownloadBtn = ({ renameInput = true }) => {
   }
 
   const handleChangeInput = val => {
-    setDirtyInput(true)
+    if (!dirtyInput) {
+      setDirtyInput(true)
+    }
+
     dispatch(setImageName(val))
   }
 
+  // To "un-dirty" the input, this function will reinstate the default filename generation
   const resetInput = () => {
     let name = generateFilename()
     dispatch(setImageName(name))
@@ -73,9 +78,12 @@ const DownloadBtn = ({ renameInput = true }) => {
   return (
     <div className="form-group max-w-lg my-8 shadow">
       <button
-        className="btn bg-gray-200 text-accent rounded-r-none"
+        className={`btn bg-gray-200 rounded-r-none ${
+          dirtyInput ? "text-accent" : "text-gray-400"
+        }`}
         title="Reset Default"
         onClick={() => resetInput()}
+        disabled={!dirtyInput}
       >
         <i className="ri-refresh-line" />
       </button>
