@@ -4,7 +4,7 @@ const Selection = ({ color, onSelect, selected }) => {
   if (color === "transparent") {
     return (
       <div
-        className={`w-8 h-8 rounded cursor-pointer mr-1 my-1 flex items-center justify-center ${
+        className={`w-8 h-8 rounded-full cursor-pointer mr-1 my-1 flex items-center justify-center ${
           selected ? "border-2 border-gray" : "border border-gray-400"
         }`}
         style={{ backgroundColor: color }}
@@ -18,8 +18,8 @@ const Selection = ({ color, onSelect, selected }) => {
 
   return (
     <div
-      className={`w-8 h-8 rounded cursor-pointer mr-1 my-1 ${
-        selected && "border-2 border-gray"
+      className={`w-8 h-8 rounded-full cursor-pointer mr-1 my-1 ${
+        selected && "border border-primary"
       }`}
       style={{ backgroundColor: color }}
       onClick={() => onSelect({ hex: color })}
@@ -28,14 +28,7 @@ const Selection = ({ color, onSelect, selected }) => {
   )
 }
 
-const colors = [
-  "#7BDCB5",
-  "#6AAEE8",
-  "#ABB8C3",
-  "#F78DA7",
-  "#9900EF",
-  "transparent",
-]
+const colors = ["#7BDCB5", "#6AAEE8", "#F78DA7", "#9900EF", "transparent"]
 
 const ColorPicker = props => {
   const { onChange, value = "#6aaee8", label = "Background" } = props
@@ -49,7 +42,7 @@ const ColorPicker = props => {
     <div className="flex flex-col">
       <div
         className="flex flex-wrap items-center"
-        style={{ maxWidth: "300px" }}
+        style={{ maxWidth: "150px" }}
       >
         {colors.map(color => (
           <Selection

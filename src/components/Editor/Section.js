@@ -4,13 +4,14 @@ const Section = props => {
   const { label } = props
   return (
     <div
-      className="my-2 md:my-0 lg:my-4 flex flex-col justify-center px-12 justify-between border-r last:border-r-0 lg:border-r-0 lg:border-b border-gray-200"
+      className="lg:my-4 flex flex-col items-center justify-between"
       data-label={`Section-${label}`}
     >
-      <>{props.children}</>
-      <h6 className="font-header font-thin text-xs text-center uppercase text-gray-600">
-        {label}
-      </h6>
+      {label && (
+        <h6 className="text-xs font-thin uppercase text-gray-600">{label}</h6>
+      )}
+      <div className="flex flex-col justify-center">{props.children}</div>
+      {label && <div className="" />}
     </div>
   )
 }

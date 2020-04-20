@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import HeaderImg from "../../images/LandingPage/Logo_Macbook-iPhone_Dark.png"
+import HeaderImg from "../../images/LandingPage/HeaderImage.png"
 
 const HeroHeader = () => {
   return (
@@ -8,7 +8,7 @@ const HeroHeader = () => {
       className="w-full flex flex-wrap items-center justify-around px-8 py-12 text-gray HeroHeader"
       id="HeroHeader"
     >
-      <div className="max-w-md text-center mx-auto md:mx-0 md:text-left">
+      <div className="w-full md:w-1/2 max-w-md text-center mx-auto md:mx-0 md:text-left">
         <h1 className="font-header font-thin text-5xl my-4 highlight">
           Easy Device Screenshots
         </h1>
@@ -26,7 +26,7 @@ const HeroHeader = () => {
           <i className="ri-arrow-right-fill ml-4" />
         </Link>
       </div>
-      <img className="max-w-md" src={HeaderImg} />
+      <img className="w-full md:w-1/2 my-4 md:my-0 max-w-3xl" src={HeaderImg} />
     </section>
   )
 }

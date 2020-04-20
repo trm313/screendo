@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import ReactSlider from "react-input-slider";
+import React, { useState } from "react"
+import ReactSlider from "react-input-slider"
 
-const Slider = (props) => {
+const Slider = props => {
   const {
     onChange,
     value = 10,
@@ -10,12 +10,14 @@ const Slider = (props) => {
     step = 1,
     label = "Value",
     units = "px",
-  } = props;
+    maxWidth = "100%",
+    padding = "5px 0",
+  } = props
 
   return (
     <>
       <h6 className="uppercase font-paragraph text-gray text-xs font-thin">{`${label}`}</h6>
-      <div className="flex items-center">
+      <div className="flex items-center" style={{ maxWidth, padding }}>
         <ReactSlider
           axis="x"
           xstep={step}
@@ -35,7 +37,7 @@ const Slider = (props) => {
         <p className="text-gray text-xs ml-2">{`${value}${units}`}</p>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Slider;
+export default Slider

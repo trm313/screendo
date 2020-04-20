@@ -85,7 +85,7 @@ const Editor = props => {
 
   return (
     <div className="flex flex-wrap w-full">
-      <div className="w-full lg:w-1/4 flex items-center lg:flex-col lg:justify-center">
+      <div className="p-4 w-full lg:w-1/4 flex flex-wrap justify-around lg:flex-col lg:justify-start border-gray-200 lg:border-r">
         <Section label="Image">
           <Uploader />
         </Section>
@@ -96,12 +96,11 @@ const Editor = props => {
             min={10}
             max={100}
             step={5}
-            label="Padding"
+            label=""
             units="px"
+            maxWidth="150px"
+            padding="5px 0"
           />
-          <h6 className="uppercase font-paragraph text-gray text-xs font-thin">
-            Background Color
-          </h6>
           <ColorPicker
             onChange={val => handleEditorChange("bgColor", val)}
             value={graphic.imageConfigSettings.bgColor}
@@ -109,11 +108,13 @@ const Editor = props => {
         </Section>
         <Section label="Device">
           {device.enabledControls.frameStyleSelection && (
-            <DeviceStyleSelector
-              styles={device.styles}
-              onSelect={handleDeviceStyleChange}
-              selectedType={graphic.deviceConfigSettings.type}
-            />
+            <>
+              <DeviceStyleSelector
+                styles={device.styles}
+                onSelect={handleDeviceStyleChange}
+                selectedType={graphic.deviceConfigSettings.type}
+              />
+            </>
           )}
           {device.enabledControls.notchSelection && (
             <ToggleButton
