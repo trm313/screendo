@@ -8,6 +8,7 @@ import SEO from "../components/Layout/seo"
 import HeroHeader from "../components/LandingPage/HeroHeader"
 import FramesList from "../components/LandingPage/FramesList"
 import FAQ from "../components/LandingPage/FAQ"
+import Features from "../components/LandingPage/Features"
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <div id="Polkadot--Grey">
       <HeroHeader />
       <FramesList />
+      <Features />
       <FAQ />
     </div>
   </Layout>

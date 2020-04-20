@@ -9,7 +9,7 @@ const HeroHeader = () => {
       id="HeroHeader"
     >
       <div className="w-full md:w-1/2 max-w-md text-center mx-auto md:mx-0 md:text-left">
-        <h1 className="font-header font-thin text-5xl my-4 highlight">
+        <h1 className="font-header font-thin text-gray-800 text-5xl my-4 highlight">
           Easy Device Screenshots
         </h1>
         <h2 className="font-paragraph font-thin text-2xl my-4 normal-case">
