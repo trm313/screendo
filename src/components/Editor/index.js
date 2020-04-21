@@ -29,7 +29,7 @@ const Editor = props => {
   }
 
   const handleEditorChange = (field, value) => {
-    console.log({ field, value })
+    // console.log({ field, value })
     dispatch(handleImageConfigChange({ field, value }))
   }
 

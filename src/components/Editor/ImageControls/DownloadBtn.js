@@ -5,6 +5,7 @@ import domtoimage from "dom-to-image"
 import download from "downloadjs"
 
 import { setImageName } from "../../../reducers/graphicReducer"
+import { gaImageDownload } from "../../../utils/ga"
 
 const triggerDownload = (filename = "Screenshot.png") => {
   let canvas = document.getElementById("screenshot-0")
@@ -12,8 +13,9 @@ const triggerDownload = (filename = "Screenshot.png") => {
   domtoimage
     .toPng(canvas)
     .then(dataUrl => {
-      console.log(dataUrl)
+      // console.log(dataUrl)
       download(dataUrl, filename)
+      gaImageDownload()
     })
     .catch(error => {
       console.error("Something went wrong downloading image", error)

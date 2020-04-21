@@ -27,7 +27,7 @@ const graphicSlice = createSlice({
   initialState,
   reducers: {
     setImage(state, action) {
-      console.log({ state, action })
+      // console.log({ state, action })
       state.source.image = action.payload.image
       state.source.filename = action.payload.filename
 

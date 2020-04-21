@@ -18,7 +18,7 @@ const Frame = props => {
     styleParams = device.styles.find(style => style.default)
   }
 
-  console.log({ graphic, device, styleParams })
+  // console.log({ graphic, device, styleParams })
 
   return (
     <div>

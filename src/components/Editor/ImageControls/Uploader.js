@@ -3,19 +3,19 @@ import ImageUploader from "react-images-upload"
 import { useSelector, useDispatch } from "react-redux"
 
 import { setImage } from "../../../reducers/graphicReducer"
+import { gaImageUpload } from "../../../utils/ga"
 
 const Uploader = props => {
   const dispatch = useDispatch()
   const graphic = useSelector(store => store.graphic)
 
   const onDrop = pictures => {
-    console.log("onDrop", pictures)
-
     let imageData = {
       filename: pictures[0].name,
       image: URL.createObjectURL(pictures[0]),
     }
     dispatch(setImage(imageData))
+    gaImageUpload()
   }
 
   return (
