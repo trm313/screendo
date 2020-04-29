@@ -27,7 +27,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main className="flex-grow flex flex-col">{children}</main>
+      <main className="w-full overflow-hidden flex-grow flex flex-col">
+        {children}
+      </main>
 
       <Footer />
     </>
