@@ -79,7 +79,7 @@ const Editor = props => {
           )}
         </Section>
       </div>
-      <div className="flex-grow flex flex-col justify-center items-center">
+      <div className="w-full lg:w-3/4 flex-grow flex flex-col justify-center items-center">
         <DownloadBtn />
         <Frame graphic={graphic} device={device} image={image} />
       </div>
