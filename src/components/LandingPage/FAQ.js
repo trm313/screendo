@@ -31,7 +31,7 @@ const questions = [
 
 const FAQ = () => {
   return (
-    <section className="w-full p-8 text-center">
+    <section className="w-full py-8 px-4 md:px-8 text-center">
       <h2 className="highlight text-3xl">Frequently Asked Questions</h2>
       <div className="text-left max-w-2xl mx-auto mt-8">
         {questions.map(q => (

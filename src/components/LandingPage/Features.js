@@ -28,15 +28,15 @@ const featureList = [
 const Feature = ({ title, subtitle }) => (
   <li className="my-4">
     <h2 className="highlight text-gray-800">{title}</h2>
-    <p className="text-gray-600">{subtitle}</p>
+    <p className="text-gray-600 font-thin">{subtitle}</p>
   </li>
 )
 
 const Features = () => {
   return (
-    <section className="w-full text-center my-12">
-      <div className="flex flex-wrap items-center justify-around">
-        <img src={AppScreenshot1} className="w-full max-w-2xl" />
+    <section className="w-full text-center my-12 px-4">
+      <div className="flex flex-wrap-reverse md:flex-wrap items-center justify-around">
+        <img src={AppScreenshot1} className="w-full max-w-2xl" alt="Screendo device screenshot Macbook" />
         <div className="text-left max-w-md">
           <ul>
             <Feature

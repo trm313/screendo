@@ -9,6 +9,7 @@ import HeroHeader from "../components/LandingPage/HeroHeader"
 import FramesList from "../components/LandingPage/FramesList"
 import FAQ from "../components/LandingPage/FAQ"
 import Features from "../components/LandingPage/Features"
+import DeviceBlocks from '../components/LandingPage/DeviceBlocks'
 
 const IndexPage = () => (
   <Layout>
@@ -18,6 +19,7 @@ const IndexPage = () => (
       <FramesList />
       <Features />
       <FAQ />
+      <DeviceBlocks />
     </div>
   </Layout>
 )

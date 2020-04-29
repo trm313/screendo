@@ -26,7 +26,7 @@ const HeroHeader = () => {
           <i className="ri-arrow-right-fill ml-4" />
         </Link>
       </div>
-      <img className="w-full md:w-1/2 my-4 md:my-0 max-w-3xl" src={HeaderImg} />
+      <img className="w-full md:w-1/2 my-4 md:my-0 max-w-3xl" src={HeaderImg} alt="Screendo device screenshot Macbook and iPhone" />
     </section>
   )
 }
