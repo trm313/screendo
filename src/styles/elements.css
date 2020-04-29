@@ -40,7 +40,7 @@ a:hover {
 
 /** BUTTONS **/
 .btn {
-  @apply bg-gray-400 py-2 px-4 rounded font-header font-thin uppercase flex items-center;
+  @apply bg-gray-400 text-white py-2 px-4 rounded font-header font-thin uppercase flex items-center;
 }
 
 .btn-primary {
