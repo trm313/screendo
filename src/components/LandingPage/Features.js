@@ -35,8 +35,12 @@ const Feature = ({ title, subtitle }) => (
 const Features = () => {
   return (
     <section className="w-full text-center my-12 px-4">
-      <div className="flex flex-wrap-reverse md:flex-wrap items-center justify-around">
-        <img src={AppScreenshot1} className="w-full max-w-2xl" alt="Screendo device screenshot Macbook" />
+      <div className="flex flex-wrap-reverse xl:flex-wrap items-center justify-around">
+        <img
+          src={AppScreenshot1}
+          className="w-full max-w-2xl"
+          alt="Screendo device screenshot Macbook"
+        />
         <div className="text-left max-w-md">
           <ul>
             <Feature

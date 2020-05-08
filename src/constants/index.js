@@ -49,7 +49,7 @@ export const deviceConfigs = [
     device: devices.SAFARIBROWSER,
     defaultScreenshot: DefaultBrowser,
     recommended: {
-      imageSize: "1920x1080",
+      imageSize: "885x500",
       aspectRatio: "",
     },
     enabledControls: {
@@ -136,7 +136,7 @@ export const deviceConfigs = [
     device: devices.MACAIR,
     defaultScreenshot: DefaultComputer,
     recommended: {
-      imageSize: "1920x1080",
+      imageSize: "885x500",
       aspectRatio: "",
     },
     enabledControls: {
@@ -176,7 +176,7 @@ export const deviceConfigs = [
     device: devices.IMACPRO,
     defaultScreenshot: DefaultBrowser,
     recommended: {
-      imageSize: "1920x1080",
+      imageSize: "885x500",
       aspectRatio: "",
     },
     enabledControls: {

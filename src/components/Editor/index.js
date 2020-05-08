@@ -41,7 +41,9 @@ const Editor = props => {
     <div className="flex flex-wrap w-full">
       <div className="p-4 w-full lg:w-1/4 flex flex-wrap justify-around lg:flex-col lg:justify-start border-gray-200 lg:border-r">
         <Section label="Image">
-          <Uploader />
+          <Uploader
+            label={`Recommended size: ${device.recommended.imageSize}px`}
+          />
         </Section>
         <Section label="Canvas">
           <Slider

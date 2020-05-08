@@ -6,6 +6,7 @@ import { setImage } from "../../../reducers/graphicReducer"
 import { gaImageUpload } from "../../../utils/ga"
 
 const Uploader = props => {
+  const { label = "Upload Screenshot" } = props
   const dispatch = useDispatch()
   const graphic = useSelector(store => store.graphic)
 
@@ -26,7 +27,7 @@ const Uploader = props => {
       onChange={onDrop}
       imgExtension={[".jpg", ".png"]}
       // label="Max file size: 5mb \n| Accepts: png, jpg"
-      label="Upload Screenshot"
+      label={label}
       // withLabel={false}
       maxFileSize={5242880}
       buttonClassName="btn btn-primary"
