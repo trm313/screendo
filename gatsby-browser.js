@@ -12,7 +12,7 @@ import "tailwindcss/components.css"
 
 // Custom Styles
 import "./src/styles/fonts.css"
-// import "./src/styles/gatsby-layout.css"
+import "./src/styles/markdown.css"
 import "./src/styles/elements.css"
 import "./src/styles/components.css"
 
