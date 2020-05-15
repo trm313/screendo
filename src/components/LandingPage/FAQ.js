@@ -2,6 +2,14 @@ import React from "react"
 
 const questions = [
   {
+    question: "Can I use the mockups for commercial purposes?",
+    answer: "Yes - there are no restrictions on how you use your mockups",
+  },
+  {
+    question: "Is it free?",
+    answer: "Yes - this is a free tool to help you save time and effort",
+  },
+  {
     question:
       "Do I have to provide screenshots of specific sizes (width and height)?",
     answer:
@@ -35,7 +43,7 @@ const FAQ = () => {
       <h2 className="highlight text-3xl">Frequently Asked Questions</h2>
       <div className="text-left max-w-2xl mx-auto mt-8">
         {questions.map(q => (
-          <div className="my-4">
+          <div className="my-8">
             <h6 className="text-sm border-b border-gray-200">{q.question}</h6>
             <p className="my-2">{q.answer}</p>
           </div>
