@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Screendo - Free, Easy Device Screenshots`,
-    description: `Free, easy device screenshots | iPhone, Android, Macbook, Browser, iMac`,
+    title: `Screendo - Free, Easy Screenshot Mockups`,
+    description: `Free, easy screenshot mockups | iPhone, Android, Macbook, Browser, iMac`,
     author: `Taylor McManus`,
   },
   plugins: [

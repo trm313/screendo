@@ -18,7 +18,7 @@ Screendo doesn’t collect any kind of personal information when you use our app
 
 We use Google Analytics (https://www.google.com/analytics) to track our website traffic. It is a web analytics service offered by Google that tracks and reports website traffic.
 
-Screendo is a client-side application, and no images files uploaded by a user are stored by Screendo, or sent to any 3rd parties.
+Screendo is a client-side application, and no image files uploaded by a user are stored by Screendo, or sent to any 3rd parties.
 
 ## Use of Personal Information
 

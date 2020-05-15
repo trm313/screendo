@@ -10,13 +10,14 @@ const HeroHeader = () => {
     >
       <div className="w-full md:w-1/2 max-w-md text-center mx-auto md:mx-0 md:text-left">
         <h1 className="font-header font-thin text-gray-800 text-5xl my-4 highlight">
-          Easy Device Screenshots
+          Free Mockup Generator
         </h1>
         <h2 className="font-paragraph font-thin text-2xl my-4 normal-case">
-          Devices are dynamically generated to fit your image
+          Modern and clean device styles, generated dynamically to fit your
+          screenshot
         </h2>
         <h6 className="my-2 text-gray-600">
-          No cropping, no stretching, no headaches
+          iPhone, Android, Macbook, iMac, Safari
         </h6>
         <Link
           className="btn btn-primary shadow-lg justify-center w-40 mx-auto md:mx-0"
@@ -26,7 +27,11 @@ const HeroHeader = () => {
           <i className="ri-arrow-right-fill ml-4" />
         </Link>
       </div>
-      <img className="w-full md:w-1/2 my-4 md:my-0 max-w-3xl" src={HeaderImg} alt="Screendo device screenshot Macbook and iPhone" />
+      <img
+        className="w-full md:w-1/2 my-4 md:my-0 max-w-3xl"
+        src={HeaderImg}
+        alt="Screendo device screenshot Macbook and iPhone"
+      />
     </section>
   )
 }
